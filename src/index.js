@@ -1,12 +1,18 @@
 
 exports.min = function min (array) {
-  return 0;
+    return (array || []).reduce((acc, cur) => {
+        return Math.min(acc,cur);
+    }, 0);
 }
 
 exports.max = function max (array) {
-  return 0;
+  return (array || []).reduce((acc, cur) => {
+      return Math.max(acc,cur);
+  }, 0);
 }
 
 exports.avg = function avg (array) {
-  return 0;
+  return (array || []).reduce((acc, cur) => {
+      return (acc + cur);
+  }, 0)/ (array || []).length || 0 ;
 }
